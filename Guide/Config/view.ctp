@@ -387,6 +387,7 @@ if(isset($config['logo']) && $config['logo']) {
             <span class="label label-primary">
 							<?php foreach ($Theme->getThemesInstalled() as $theme): ?>
 								<?php if ($theme->name == "Guide"): ?>
+									<?php $version = $theme->version; ?>
 									<?= $theme->version; ?>
 								<?php break; endif; ?>
 							<?php endforeach; ?>
@@ -404,7 +405,7 @@ if(isset($config['logo']) && $config['logo']) {
           <h3 class="box-title">Une question ?</h3>
         </div>
         <div class="box-body">
-          Contactez MrSheepSheep sur le Discord de Mineweb en message privé ou dans le salon <b>#support</b>.
+          Contactez MrSheepSheep sur le Discord de Mineweb en message privé ou dans le salon <b>#support</b> en précisant bien @MrSheepSheep.
         </div>
 			</div>
 		</div>
@@ -419,8 +420,8 @@ if(isset($config['logo']) && $config['logo']) {
 					</div>
         </div>
         <div class="box-body" id="issues">
-          <?= json_decode(file_get_contents('https://gitlab.com/mrsheepsheep/mw-guide/issues.json'), true)['html']; ?>
-					<small>Cette liste est mise à jour en temps réel. </small>
+          <?= json_decode(file_get_contents('https://gitlab.com/mrsheepsheep/mw-guide/issues.json?milestone=1.0.1&state=all'), true)['html']; ?>
+					<small>Cette liste est mise à jour en temps réel. Les bugs écrits en vert sont déjà corrigés.</small>
         </div>
 			</div>
 		</div>
@@ -433,4 +434,10 @@ if(isset($config['logo']) && $config['logo']) {
 		margin: 0;
 	}	
 	.issuable-meta, .issuable-info { display: none }
+	.issue a {
+		color: red;
+	}
+	.closed a {
+		color: green;
+	}
 </style>
