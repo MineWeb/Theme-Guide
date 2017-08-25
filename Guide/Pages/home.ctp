@@ -10,7 +10,7 @@
 						<a href="<?= $theme_config['presentation_leftbtn_href']; ?>" class="btn btn-outline"><?= $theme_config['presentation_leftbtn_text']; ?></a>
 					<?php endif; ?>
 					<?php if($theme_config['presentation_rightbtn_href'] == ""): ?>
-						<button type="button" class="copy-me btn btn-primary" data-clipboard-text="<?= $theme_config['presentation_leftbtn_text']; ?>"><?= $theme_config['presentation_leftbtn_text']; ?></button>
+						<button type="button" class="copy-me btn btn-primary" data-clipboard-text="<?= $theme_config['presentation_rightbtn_text']; ?>"><?= $theme_config['presentation_rightbtn_text']; ?></button>
 						
 						<script type="text/javascript">
 							$(function(){
