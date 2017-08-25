@@ -5,6 +5,7 @@ if(isset($config['logo']) && $config['logo']) {
   $form_input['img'] = $config['logo'];
   $form_input['filename'] = 'theme_logo.png';
 }
+echo $this->Html->script('jQuery-2.1.4.min.js');
 ?>
 <section class="content">
   <div class="row">
@@ -420,8 +421,8 @@ if(isset($config['logo']) && $config['logo']) {
 					</div>
         </div>
         <div class="box-body" id="issues">
-          <?= json_decode(file_get_contents('https://gitlab.com/mrsheepsheep/mw-guide/issues.json?milestone=1.0.1&state=all'), true)['html']; ?>
-					<small>Cette liste est mise à jour en temps réel. Les bugs écrits en vert sont déjà corrigés.</small>
+          <?= json_decode(file_get_contents('https://gitlab.com/mrsheepsheep/mw-guide/issues.json?state=opened'), true)['html']; ?>
+					<small>Les nouveaux bugs non résolus apparaîtront ici.</small>
         </div>
 			</div>
 		</div>
@@ -434,10 +435,9 @@ if(isset($config['logo']) && $config['logo']) {
 		margin: 0;
 	}	
 	.issuable-meta, .issuable-info { display: none }
-	.issue a {
-		color: red;
-	}
-	.closed a {
-		color: green;
-	}
 </style>
+<script>
+	$(".issue-title-text a").each(function(){
+		this.href = "https://gitlab.com" + $(this).attr('href');
+	})
+</script>
