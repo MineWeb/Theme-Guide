@@ -1,0 +1,85 @@
+{
+    "name": "Guide",
+    "slug": "Guide",
+    "author": "MrSheepSheep",
+    "version": "1.0.0",
+    "apiID": -1,
+    "configurations": {
+        "color": "purple",
+        "boxed": "",
+        "favicon_url": "",
+        "cgu_register": "",
+        "vegas-overlay": "false",
+        "vegas-transition": "fade2",
+        "presentation_leftbtn_text": "Texte",
+        "presentation_leftbtn_href": "http:\/\/mineweb.org",
+        "presentation_rightbtn_text": "IP du serveur",
+        "presentation_rightbtn_href": "",
+        "slogan": "Slogan du serveur",
+        "presentation_readmore": "D\u00e9couvrez notre serveur",
+        "presentation_position": "left",
+        "features1": {
+            "%id%": {
+                "icon": "",
+                "title": "",
+                "description": ""
+            },
+            "0": {
+                "icon": "fa fa-pencil",
+                "title": "Titre",
+                "description": "Description"
+            },
+            "1": {
+                "icon": "fa fa-pencil",
+                "title": "Titre",
+                "description": "Description"
+            },
+            "2": {
+                "icon": "fa fa-pencil",
+                "title": "Titre",
+                "description": "Description"
+            }
+        },
+        "features1_image": "http:\/\/placehold.it\/500x500",
+        "features1_title": "Titre de la zone",
+        "features1_description": "Description",
+        "features2": {
+            "%id%": {
+                "icon": "",
+                "title": "",
+                "description": ""
+            },
+            "0": {
+                "icon": "fa fa-check",
+                "title": "Titre",
+                "description": "Description"
+            },
+            "1": {
+                "icon": "fa fa-check",
+                "title": "Titre",
+                "description": "Description"
+            },
+            "2": {
+                "icon": "fa fa-check",
+                "title": "Titre",
+                "description": "Description"
+            }
+        },
+        "features2_image": "http:\/\/placehold.it\/500x500",
+        "features2_title": "Titre de la zone",
+        "features2_btntext": "Bouton sp\u00e9cial",
+        "features2_btnhref": "http:\/\/mineweb.org",
+        "footer_1": "<h3>Zone 1<\/h3>\r\n<ul>\r\n<li><a href=\"http:\/\/mineweb.org\">Avec<\/a><\/li>\r\n<li><a href=\"http:\/\/mineweb.org\">Des<\/a><\/li>\r\n<li><a href=\"http:\/\/mineweb.org\">Liens<\/a><\/li>\r\n<\/ul>",
+        "footer_2": "<h3>Zone 2<\/h3>\r\n<ul>\r\n<li><a href=\"http:\/\/mineweb.org\">Avec<\/a><\/li>\r\n<li><a href=\"http:\/\/mineweb.org\">Des<\/a><\/li>\r\n<li><a href=\"http:\/\/mineweb.org\">Liens<\/a><\/li>\r\n<\/ul>",
+        "footer_3": "<h3>Zone 3<\/h3>\r\n<ul>\r\n<li><a href=\"http:\/\/mineweb.org\">Avec<\/a><\/li>\r\n<li><a href=\"http:\/\/mineweb.org\">Des<\/a><\/li>\r\n<li><a href=\"http:\/\/mineweb.org\">Liens<\/a><\/li>\r\n<\/ul>",
+        "footer_copyright": "<p>Copyright.<\/p>",
+        "logo": false
+    },
+    "supported": {
+        "eywek.shop.1": ">= 0.4.0",
+        "eywek.support.2": ">= 0.2.0",
+        "eywek.vote.3": ">= 0.7.0",
+        "eywek.factionranking.4": ">= 0.2.1",
+        "vavaballz.myfaq.5": ">= 1.0.0"
+    }
+}

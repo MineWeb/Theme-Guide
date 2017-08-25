@@ -1,0 +1,67 @@
+#fh5co-header nav ul .dropdown-menu {
+	position: absolute;
+	margin-top: 20px;
+}
+.dropdown-menu li {
+	margin-right: 0 !important;
+}
+#fh5co-header nav ul .dropdown-menu li a {
+	color: darkgray;
+	margin-top: 0;
+}
+.dropdown-menu > li > a:hover,  {
+	color: #919191;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+
+.fh5co-footer-widget ul {
+	padding: 0;
+	margin: 0;
+}
+
+.fh5co-footer-widget ul li {
+		padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+
+body .vegas-container {
+	height: 100% !important;
+}
+
+#fh5co-hero .fh5co-overlay {
+	opacity: 1;
+}
+
+.fh5co-faq-list {
+    margin: 0;
+    padding: 0;
+}
+
+.fh5co-faq-list li {
+    margin: 0 0 40px 0;
+    padding: 0;
+    line-height: 24px;
+    list-style: none;
+}
+
+.fh5co-faq-list li h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+#fh5co-offcanvas .dropdown {
+	display: none;
+}
+
+.news-abs {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 5px 8px;
+	color: lightgray;
+}
