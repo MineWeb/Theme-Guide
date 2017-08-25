@@ -8,35 +8,6 @@ if(isset($config['logo']) && $config['logo']) {
 ?>
 <section class="content">
   <div class="row">
-		<div class="col-md-4">
-			<div class="box box-success">
-        <div class="box-header with-border">
-          <h3 class="box-title">Changelog</h3>
-          <div class="box-tools pull-right">
-            <span class="label label-primary">
-							<?php foreach ($Theme->getThemesInstalled() as $theme): ?>
-								<?php if ($theme->name == "Guide"): ?>
-									<?= $theme->version; ?>
-								<?php break; endif; ?>
-							<?php endforeach; ?>
-						</span>
-          </div>
-        </div>
-        <div class="box-body">
-          <?= file_get_contents("../View/Themed/Guide/Config/changelog.html"); ?>
-        </div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="box box-warning">
-        <div class="box-header with-border">
-          <h3 class="box-title">Une question ?</h3>
-        </div>
-        <div class="box-body">
-          Contactez MrSheepSheep sur le Discord de Mineweb en message privé ou dans le salon <b>#support</b>.
-        </div>
-			</div>
-		</div>
 		<form method="post" enctype="multipart/form-data" data-ajax="false">
 			<div class="col-md-12">
 				<div class="nav-tabs-custom">
@@ -407,4 +378,59 @@ if(isset($config['logo']) && $config['logo']) {
     	</div>
 		</form>
   </div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="box box-success">
+        <div class="box-header with-border">
+          <h3 class="box-title">Changelog</h3>
+          <div class="box-tools pull-right">
+            <span class="label label-primary">
+							<?php foreach ($Theme->getThemesInstalled() as $theme): ?>
+								<?php if ($theme->name == "Guide"): ?>
+									<?= $theme->version; ?>
+								<?php break; endif; ?>
+							<?php endforeach; ?>
+						</span>
+          </div>
+        </div>
+        <div class="box-body">
+          <?= file_get_contents("../View/Themed/Guide/Config/changelog.html"); ?>
+        </div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="box box-warning">
+        <div class="box-header with-border">
+          <h3 class="box-title">Une question ?</h3>
+        </div>
+        <div class="box-body">
+          Contactez MrSheepSheep sur le Discord de Mineweb en message privé ou dans le salon <b>#support</b>.
+        </div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="box box-warning">
+        <div class="box-header with-border">
+          <h3 class="box-title">Bugs connus</h3>
+					<div class="box-tools pull-right">
+            <a href="https://gitlab.com/mrsheepsheep/mw-guide/issues" class="label label-danger">
+							Signaler un bug
+						</a>
+					</div>
+        </div>
+        <div class="box-body" id="issues">
+          <?= json_decode(file_get_contents('https://gitlab.com/mrsheepsheep/mw-guide/issues.json'), true)['html']; ?>
+					<small>Cette liste est mise à jour en temps réel. </small>
+        </div>
+			</div>
+		</div>
+	</div>
 </section>
+<style type="text/css" scoped>
+	.content-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}	
+	.issuable-meta, .issuable-info { display: none }
+</style>
