@@ -65,3 +65,9 @@ body .vegas-container {
 	padding: 5px 8px;
 	color: lightgray;
 }
+
+/* Fix for front backdrop */
+.modal-backdrop {
+	z-index: -1;
+	display: none;
+}
