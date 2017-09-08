@@ -199,7 +199,6 @@
 		testimonialFlexslider();
 		goToTop();
 		contentWayPoint();
-		checkFooter();
 	});
 
 
