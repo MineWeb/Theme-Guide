@@ -9,24 +9,26 @@
 					<?php if($theme_config['presentation_leftbtn_href'] != ""): ?>
 						<a href="<?= $theme_config['presentation_leftbtn_href']; ?>" class="btn btn-outline"><?= $theme_config['presentation_leftbtn_text']; ?></a>
 					<?php endif; ?>
-					<?php if($theme_config['presentation_rightbtn_href'] == ""): ?>
-						<button type="button" class="copy-me btn btn-primary" data-clipboard-text="<?= $theme_config['presentation_rightbtn_text']; ?>"><?= $theme_config['presentation_rightbtn_text']; ?></button>
-						
-						<script type="text/javascript">
-							$(function(){
-								var clipboard = new Clipboard('.copy-me');
-								clipboard.on('success', function(e){
-									$(".copy-me").text("IP copiée !");
-								});
+					<?php if($theme_config['presentation_rightbtn_text'] != ""): ?>
+						<?php if($theme_config['presentation_rightbtn_href'] == ""): ?>
+							<button type="button" class="copy-me btn btn-primary" data-clipboard-text="<?= $theme_config['presentation_rightbtn_text']; ?>"><?= $theme_config['presentation_rightbtn_text']; ?></button>
 
-								clipboard.on('error', function(e){
-									$(".copy-me").text("Impossible de copier l'IP.");
-								});
-							})
-						</script>
-					<?php else: ?>
+							<script type="text/javascript">
+								$(function(){
+									var clipboard = new Clipboard('.copy-me');
+									clipboard.on('success', function(e){
+										$(".copy-me").text("IP copiée !");
+									});
+
+									clipboard.on('error', function(e){
+										$(".copy-me").text("Impossible de copier l'IP.");
+									});
+								})
+							</script>
+						<?php else: ?>
 							<a href="<?= $theme_config['presentation_rightbtn_href']; ?>" class="btn btn-primary"><?= $theme_config['presentation_rightbtn_text']; ?></a>
 						<?php endif; ?>
+					<?php endif; ?>
 					</p>
 					<h3 class="animate-box">
 						<?php if($banner_server): ?>
