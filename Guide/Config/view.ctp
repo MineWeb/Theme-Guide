@@ -434,7 +434,8 @@ echo $this->Html->script('jQuery-2.1.4.min.js');
 		padding: 0;
 		margin: 0;
 	}	
-	.issuable-meta, .issuable-info { display: none }
+	.issuable-meta, .issuable-info { display: none; }
+	[data-labels="[]"] { display: none; }
 </style>
 <script>
 	$(".issue-title-text a").each(function(){
