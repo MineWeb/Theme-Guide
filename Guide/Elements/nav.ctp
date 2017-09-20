@@ -31,7 +31,7 @@
 			<h1 id="fh5co-logo">
 				<a href="<?= $this->Html->url('/') ?>">
 					<?php if($theme_config['logo'] != ""): ?>
-						<img src="<?= $theme_config['logo'] ?>" style="max-height: 120px;">
+						<img src="<?= $theme_config['logo'] ?>" style="max-height: 120px; max-width: 100%;">
 					<?php else: ?>
 							<?= $website_name ?>
 					<?php endif; ?>
