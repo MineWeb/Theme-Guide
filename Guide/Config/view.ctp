@@ -421,7 +421,7 @@ echo $this->Html->script('jQuery-2.1.4.min.js');
 					</div>
         </div>
         <div class="box-body" id="issues">
-          <?= json_decode(file_get_contents('https://gitlab.com/mrsheepsheep/mw-guide/issues.json?state=opened'), true)['html']; ?>
+          <?= json_decode(file_get_contents('https://gitlab.com/mrsheepsheep/mw-guide/issues.json'), true)['html']; ?>
 					<small>Les nouveaux bugs non résolus apparaîtront ici.</small>
         </div>
 			</div>
@@ -435,7 +435,7 @@ echo $this->Html->script('jQuery-2.1.4.min.js');
 		margin: 0;
 	}	
 	.issuable-meta, .issuable-info { display: none; }
-	[data-labels="[]"] { display: none; }
+	[data-labels="[2614638]"], [data-labels="[2741259]"] { display: none; }
 </style>
 <script>
 	$(".issue-title-text a").each(function(){
