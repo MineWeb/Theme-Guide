@@ -4,6 +4,7 @@
     "author": "MrSheepSheep",
     "version": "1.0.1",
     "apiID": -1,
+	  "slider": true,
     "configurations": {
         "color": "purple",
         "boxed": "",
@@ -77,9 +78,6 @@
     },
     "supported": {
         "eywek.shop.1": ">= 0.4.0",
-        "eywek.support.2": ">= 0.2.0",
-        "eywek.vote.3": ">= 0.7.0",
-        "eywek.factionranking.4": ">= 0.2.1",
         "vavaballz.myfaq.5": ">= 1.0.0"
     }
 }
