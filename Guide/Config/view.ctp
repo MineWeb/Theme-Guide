@@ -8,6 +8,7 @@ if(isset($config['logo']) && $config['logo']) {
 echo $this->Html->script('jQuery-2.1.4.min.js');
 ?>
 <section class="content">
+	<div class="callout callout-danger"><h4><i class="fa fa-copyright"></i> Rappel</h4>Il est interdit de modifier les crédits du footer. Votre licence sera suspendue si vous le faites.</div>
   <div class="row">
 		<form method="post" enctype="multipart/form-data" data-ajax="false">
 			<div class="col-md-12">
