@@ -32,7 +32,7 @@
 					</p>
 					<h3 class="animate-box">
 						<?php if($banner_server): ?>
-							<?= $server_infos['getPlayerCount'] ?>  joueurs sont connectés
+							<?= $server_infos['GET_PLAYER_COUNT'] ?>  joueurs sont connectés
 						<?php else: ?>
 							<?= $Lang->get('SERVER__STATUS_OFF'); ?>
 						<?php endif; ?>
