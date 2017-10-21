@@ -1309,7 +1309,7 @@ body {
   display: none;
   cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .fh5co-nav-toggle {
     display: block;
     top: 20px;
