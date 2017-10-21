@@ -5,7 +5,6 @@ if(isset($config['logo']) && $config['logo']) {
   $form_input['img'] = $config['logo'];
   $form_input['filename'] = 'theme_logo.png';
 }
-echo $this->Html->script('jQuery-2.1.4.min.js');
 ?>
 <section class="content">
 	<div class="callout callout-danger"><h4><i class="fa fa-copyright"></i> Rappel</h4>Il est interdit de modifier les crédits du footer. Votre licence sera suspendue si vous le faites.</div>
@@ -156,7 +155,7 @@ echo $this->Html->script('jQuery-2.1.4.min.js');
 								<div class="row">
 									<div class="col-md-9">
 										<button type="button" class="btn btn-success add-feature1">Ajouter</button><br>
-										<small>Utilisez des icônes <a href="fontawesome.io/icons/">Font Awesome</a> (fa fa-[nom]), <a href="https://icomoon.io/app/#/select">IcoMoon</a> (icon-[nom]) disponible dans les fichiers css.</small>
+										<small>Utilisez des icônes <a href="http://fontawesome.io/icons/">Font Awesome</a> (fa fa-[nom]), <a href="https://icomoon.io/app/#/select">IcoMoon</a> (icon-[nom]) disponible dans les fichiers css.</small>
 										<div class="row" id="features1">
 											<div id="f1-copy" class="feature1 col-md-4" style="display: none">
 												<h3>Fonctionnalité</h3>
@@ -402,12 +401,12 @@ echo $this->Html->script('jQuery-2.1.4.min.js');
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="box box-warning">
+			<div class="box box-info">
         <div class="box-header with-border">
           <h3 class="box-title">Une question ?</h3>
         </div>
         <div class="box-body">
-          Contactez MrSheepSheep sur le Discord de Mineweb en message privé ou dans le salon <b>#support</b> en précisant bien @MrSheepSheep.
+					Signalez tout problème avec le thème avec le bouton "Signaler un bug". Si vous souhaitez me contacter, mentionnez moi sur le Discord de Mineweb ou par message privé.
         </div>
 			</div>
 		</div>
