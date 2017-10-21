@@ -1,4 +1,4 @@
-<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/full_image_1.jpg);">
+<section id="fh5co-hero" class="no-js-fullheight">
 	<div class="fh5co-overlay"></div>
 	<div class="container">
 		<div class="fh5co-intro no-js-fullheight">
