@@ -48,6 +48,20 @@
 								</li>
 								<?php endif; ?>
 							</ul>
+							<?php if (!empty($findSocialButtons)){
+								foreach ($findSocialButtons as $key => $value) {
+									echo '<a target="_blank" class="btn btn-default btn-block" style="text-decoration: none; border: none; color: white; background-color:'.$value['SocialButton']['color'].'" href="'.$value['SocialButton']['url'].'">';
+									if(!empty($value['SocialButton']['img'])) {
+										echo '<img class="img-responsive" src="'.$value['SocialButton']['img'].'">';
+									}
+									if(!empty($value['SocialButton']['title'])) {
+										echo $value['SocialButton']['title'];
+									}
+									echo '</a>';
+								}
+									echo '<br>';
+							}
+							?>
 						</div>
 					</div>	
 					<?php endif; ?>
