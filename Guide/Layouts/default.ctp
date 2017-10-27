@@ -82,6 +82,8 @@
 	<?= $this->Html->script('app.js') ?>
 	<?= $this->Html->script('form.js') ?>
 	<?= $this->Html->script('notification.js') ?>
+  <!-- HomeModal -->
+	<?= $Module->loadModules('home') ?>
 	<script>
 	<?php if($isConnected) { ?>
 		// Notifications
