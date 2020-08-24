@@ -17,11 +17,12 @@ $(document).ready(function(){
 <style type="text/css">
 .show-password {
     font-size: 9px;
-    position: absolute;
-    cursor: pointer;
-    margin-left: 80%;
-    margin-top: -25px;
-    color: black;
+    float: right;
+    margin-right: 8px;
+    margin-top: -35px;
+    position: relative;
+    z-index: 2;
+    color: grey;
   }
 </style>
 
