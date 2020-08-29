@@ -1,8 +1,8 @@
 {
     "name": "Guide",
     "slug": "Guide",
-    "author": "MrSheepSheep",
-    "version": "1.0.4",
+    "author": "MrSheepSheep, Fury_Craft",
+    "version": "2.0",
     "apiID": -1,
 	  "slider": true,
     "configurations": {
