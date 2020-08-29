@@ -2,7 +2,7 @@
 	<div class="row row-bottom-padded-md">
 		<div class="col-md-10 col-md-offset-1 text-center">
 			<?php if($isConnected): ?>
-				<h3 class="animate-box"><?= $money; ?> <?= $Configuration->getMoneyName() ?></h3>
+				<h3 class="animate-box"><?= $money; ?></h3>
 				<?= $vouchers->get_vouchers(); ?>
 				<a href="#" data-toggle="modal" data-target="#addmoney" class="animate-box btn btn-primary">Créditer mon compte</a>
 				<a href="#" data-toggle="modal" data-target="#cart-modal" class="animate-box btn btn-default"><i class="fa fa-shopping-cart"></i> Panier</a>
