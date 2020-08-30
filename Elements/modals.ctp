@@ -1,6 +1,5 @@
 <!-- Modal (connexion ...) -->
 <!-- Afficher / cacher le mot de passe -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
     $('.show-password').click(function() {
