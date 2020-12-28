@@ -45,10 +45,6 @@ if(isset($config['logo']) && $config['logo']) {
 												</select>
 										</div>
 										<div class="form-group">
-											<label><?= $Lang->get('THEME__FAVICON_URL') ?></label>
-											<input type="text" class="form-control" name="favicon_url" value="<?= $config['favicon_url'] ?>">
-										</div>
-										<div class="form-group">
 											<label>Conditions d'utilisation</label>
 											<p>Entrez ici l'URL de vos conditions d'utilisation qui devront être acceptées lors de l'inscription.</p>
 											<input type="text" class="form-control" name="cgu_register" placeholder="Désactivé" value="<?= $config['cgu_register'] ?>">
