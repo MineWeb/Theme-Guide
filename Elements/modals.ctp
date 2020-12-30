@@ -7,7 +7,7 @@
         <h4 class="modal-title" id="myModalLabel"><?= $Lang->get('USER__LOGIN') ?></h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" method="POST" data-ajax="true" action="<?= $this->Html->url(array('plugin' => null, 'admin' => false, 'controller' => 'user', 'action' => 'ajax_login')) ?>" data-redirect-url="?">
+        <form class="form-horizontal" id="login-before-two-factor-auth"method="POST" data-ajax="true" action="<?= $this->Html->url(array('plugin' => null, 'admin' => false, 'controller' => 'user', 'action' => 'ajax_login')) ?>" data-redirect-url="?">
 
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label"><?= $Lang->get('USER__USERNAME') ?></label>
@@ -41,6 +41,28 @@
         <button type="submit" class="btn btn-primary"><?= $Lang->get('USER__LOGIN') ?></button>
       </form>
       </div>
+      <form id="login-two-factor-auth" style="display:none;" method="POST" data-ajax="true" action="<?= $this->Html->url(array('plugin' => null, 'admin' => false, 'controller' => 'Authentification', 'action' => 'validLogin')) ?>" data-redirect-url="?">
+    	<div class="modal-body">
+          <div class="ajax-msg"></div>
+          <input type="checkbox" style="display: none;" name="remember_me">
+          <div class="form-group">
+            <h5><?= $Lang->get('USER__LOGIN_CODE') ?></h5>
+            <input type="text" class="form-control" name="code" placeholder="<?= $Lang->get('USER__LOGIN_CODE') ?>">
+          </div>
+    	</div>
+    	<div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-block"><?= $Lang->get('USER__LOGIN') ?></button>
+    	</div>
+	  </form>
+	  <script type="text/javascript">
+    	function afterLogin(req, res) {
+        if (res['two-factor-auth'] === undefined)
+            return window.location = '?t_' + Date.now()
+        $('#login-two-factor-auth input[name="remember_me"]').attr('checked', $('#login-before-two-factor-auth input[name="remember_me"]').is(':checked'))
+        $('#login-before-two-factor-auth').slideUp(150)
+        $('#login-two-factor-auth').slideDown(150)
+    	}
+	  </script>
     </div>
   </div>
 </div>

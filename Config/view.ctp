@@ -38,6 +38,11 @@ if(isset($config['logo']) && $config['logo']) {
 												</select>
 										</div>
 										<div class="form-group">
+											<label>Couleur du thème (navigateur)</label>
+											<p>Entrez ici la couleeur hexadécimal pour colorer la barre url des navigateurs.</p>
+											<input type="text" class="form-control" name="theme_color" placeholder="#FFFFF" value="<?= $config['theme_color'] ?>">
+										</div>
+										<div class="form-group">
 												<label>Style de page</label>
 												<select name="boxed" class="form-control">
 													<option value=""<?= ($config['boxed'] == "") ? ' selected' : '' ?>>Normal</option>
@@ -47,6 +52,17 @@ if(isset($config['logo']) && $config['logo']) {
 										<div class="form-group">
 											<label><?= $Lang->get('THEME__FAVICON_URL') ?></label>
 											<input type="text" class="form-control" name="favicon_url" value="<?= $config['favicon_url'] ?>">
+										</div>
+										<div class="form-group">
+											<label>Auteur</label>
+											<p>Entrez ici le créateur du site pour pouvoir mieux le référencer sur internet.</p>
+											<input type="text" class="form-control" name="author" placeholder="MrSheepSheep" value="<?= $config['author'] ?>">
+										</div>
+										<div class="form-group">
+											<label>Mots clés</label>
+											<p>Entrez ici des mots clés pour pouvoir mieux le référencer sur internet.</p>
+											<input type="text" class="form-control" name="keywords" placeholder="Mineweb, monsite.fr, MrSheepSheep" value="<?= $config['keywords'] ?>">
+										</div>
 										</div>
 										<div class="form-group">
 											<label>Conditions d'utilisation</label>

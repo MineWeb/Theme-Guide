@@ -10,7 +10,28 @@
 	<title><?= $title_for_layout; ?> - <?= $website_name ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="<?= $theme_config['slogan']; ?>" />
-	<meta name="author" content="MrSheepSheep" />
+	<meta name="author" content="<?= $theme_config['author']; ?>" />
+	<meta name="copyright" content="MrSheepSheep" />
+	<meta name="keywords" content="<?= $theme_config['keywords']; ?>" />
+    <meta name="domain" content="<?php echo $_SERVER['HTTP_HOST'];?>" />
+    <meta name="robots" content="follow, index, all" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://<?php echo $_SERVER['HTTP_HOST'];?>" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:image" content="<?= $theme_config['favicon_url'] ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="<?= $website_name ?>" />
+    <meta property="og:title" content="<?= $title_for_layout; ?> - <?= $website_name ?>" />
+    <meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST'];?>" />
+    <meta property="og:description" content="<?= $theme_config['slogan']; ?>" />
+    <meta itemprop="name" content="<?= $website_name ?>" />
+    <meta itemprop="description" content="<?= $theme_config['slogan']; ?>" />
+    <meta itemprop="image" content="<?= $theme_config['favicon_url'] ?>" />
+    <meta name="theme-color" content="<?= $theme_config['theme_color']; ?>" />
+    <meta name="msapplication-TileColor" content="<?= $theme_config['theme_color']; ?>" />
+    <meta name="application-name" content="<?= $website_name ?>" />
+    <meta name="apple-mobile-web-app-title" content="<?= $website_name ?>" />
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="<?= $theme_config['favicon_url'] ?>">
 
