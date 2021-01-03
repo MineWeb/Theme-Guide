@@ -11,12 +11,30 @@
 	<meta name="author" content="MrSheepSheep" />
 
 	<title><?= $seo_config['title'] ?></title>
-    <link rel="icon" type="image/png" href="<?= $seo_config['favicon_url'] ?>"/>
+    <link rel="shortcut icon" type="image/png" href="<?= $seo_config['favicon_url'] ?>"/>
     <meta name="title" content="<?= $seo_config['title'] ?>">
     <meta property="og:title" content="<?= $seo_config['title'] ?>">
     <meta name="description" content="<?= $seo_config['description'] ?>">
     <meta property="og:description" content="<?= $seo_config['description'] ?>">
     <meta property="og:image" content="<?= $seo_config['img_url'] ?>">
+	<meta name="copyright" content="MrSheepSheep" />
+	<meta name="keywords" content="<?= $theme_config['keywords']; ?>" />
+    <meta name="domain" content="<?php echo $_SERVER['HTTP_HOST'];?>" />
+    <meta name="robots" content="follow, index, all" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://<?php echo $_SERVER['HTTP_HOST'];?>" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="<?= $website_name ?>" />
+    <meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST'];?>" />
+    <meta itemprop="name" content="<?= $website_name ?>" />
+    <meta itemprop="description" content="<?= $theme_config['slogan']; ?>" />
+    <meta itemprop="image" content="<?= $theme_config['favicon_url'] ?>" />
+    <meta name="theme-color" content="<?= $theme_config['theme_color']; ?>" />
+    <meta name="msapplication-TileColor" content="<?= $theme_config['theme_color']; ?>" />
+    <meta name="application-name" content="<?= $website_name ?>" />
+    <meta name="apple-mobile-web-app-title" content="<?= $website_name ?>" />
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	
