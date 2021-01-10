@@ -7,10 +7,16 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><?= $title_for_layout; ?> - <?= $website_name ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="<?= $theme_config['slogan']; ?>" />
-	<meta name="author" content="<?= $theme_config['author']; ?>" />
+	<meta name="author" content="MrSheepSheep" />
+
+	<title><?= $seo_config['title'] ?></title>
+    <link rel="shortcut icon" type="image/png" href="<?= $seo_config['favicon_url'] ?>"/>
+    <meta name="title" content="<?= $seo_config['title'] ?>">
+    <meta property="og:title" content="<?= $seo_config['title'] ?>">
+    <meta name="description" content="<?= $seo_config['description'] ?>">
+    <meta property="og:description" content="<?= $seo_config['description'] ?>">
+    <meta property="og:image" content="<?= $seo_config['img_url'] ?>">
 	<meta name="copyright" content="MrSheepSheep" />
 	<meta name="keywords" content="<?= $theme_config['keywords']; ?>" />
     <meta name="domain" content="<?php echo $_SERVER['HTTP_HOST'];?>" />
@@ -19,21 +25,15 @@
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://<?php echo $_SERVER['HTTP_HOST'];?>" />
     <meta property="og:locale" content="fr_FR" />
-    <meta property="og:image" content="<?= $theme_config['favicon_url'] ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="<?= $website_name ?>" />
-    <meta property="og:title" content="<?= $title_for_layout; ?> - <?= $website_name ?>" />
     <meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST'];?>" />
-    <meta property="og:description" content="<?= $theme_config['slogan']; ?>" />
     <meta itemprop="name" content="<?= $website_name ?>" />
     <meta itemprop="description" content="<?= $theme_config['slogan']; ?>" />
-    <meta itemprop="image" content="<?= $theme_config['favicon_url'] ?>" />
     <meta name="theme-color" content="<?= $theme_config['theme_color']; ?>" />
     <meta name="msapplication-TileColor" content="<?= $theme_config['theme_color']; ?>" />
     <meta name="application-name" content="<?= $website_name ?>" />
     <meta name="apple-mobile-web-app-title" content="<?= $website_name ?>" />
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="<?= $theme_config['favicon_url'] ?>">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	
