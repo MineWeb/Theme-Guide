@@ -30,7 +30,6 @@
     <meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST'];?>" />
     <meta itemprop="name" content="<?= $website_name ?>" />
     <meta itemprop="description" content="<?= $theme_config['slogan']; ?>" />
-    <meta itemprop="image" content="<?= $theme_config['favicon_url'] ?>" />
     <meta name="theme-color" content="<?= $theme_config['theme_color']; ?>" />
     <meta name="msapplication-TileColor" content="<?= $theme_config['theme_color']; ?>" />
     <meta name="application-name" content="<?= $website_name ?>" />
