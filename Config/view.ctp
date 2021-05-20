@@ -12,11 +12,11 @@ if(isset($config['logo']) && $config['logo']) {
 			<div class="col-md-12">
 				<div class="nav-tabs-custom">
 						<ul class="nav nav-tabs">
-							<li class="active"><a href="#tab_general" data-toggle="tab">Options générales</a></li>
-							<li><a href="#tab_presentation" data-toggle="tab">Zone de présentation</a></li>
-							<li><a href="#tab_features1" data-toggle="tab">Fonctionnalités 1</a></li>
-							<li><a href="#tab_features2" data-toggle="tab">Fonctionnalités 2</a></li>
-							<li><a href="#tab_footer" data-toggle="tab">Footer</a></li>
+							<li class="active"><a class="nav-link text-dark" href="#tab_general" data-toggle="tab">Options générales</a></li>
+							<li><a class="nav-link text-dark" href="#tab_presentation" data-toggle="tab">Zone de présentation</a></li>
+							<li><a class="nav-link text-dark" href="#tab_features1" data-toggle="tab">Fonctionnalités 1</a></li>
+							<li><a class="nav-link text-dark" href="#tab_features2" data-toggle="tab">Fonctionnalités 2</a></li>
+							<li><a class="nav-link text-dark" href="#tab_footer" data-toggle="tab">Footer</a></li>
 							<li class="pull-right">	<button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Sauvegarder</button></li>
 						</ul>
 						<div class="tab-content" style="padding: 15px;">
@@ -49,10 +49,6 @@ if(isset($config['logo']) && $config['logo']) {
 												</select>
 										</div>
 										<div class="form-group">
-											<label><?= $Lang->get('THEME__FAVICON_URL') ?></label>
-											<input type="text" class="form-control" name="favicon_url" value="<?= $config['favicon_url'] ?>">
-										</div>
-										<div class="form-group">
 											<label>Auteur</label>
 											<p>Entrez ici le créateur du site pour pouvoir mieux le référencer sur internet.</p>
 											<input type="text" class="form-control" name="author" placeholder="MrSheepSheep" value="<?= $config['author'] ?>">
@@ -61,7 +57,6 @@ if(isset($config['logo']) && $config['logo']) {
 											<label>Mots clés</label>
 											<p>Entrez ici des mots clés pour pouvoir mieux le référencer sur internet.</p>
 											<input type="text" class="form-control" name="keywords" placeholder="Mineweb, monsite.fr, MrSheepSheep" value="<?= $config['keywords'] ?>">
-										</div>
 										</div>
 										<div class="form-group">
 											<label>Conditions d'utilisation</label>
@@ -335,7 +330,7 @@ if(isset($config['logo']) && $config['logo']) {
 										<script type="text/javascript">
 											tinymce.init({
 													selector: "#footer_1",
-													height : 100,
+													height : 300,
 													width : '100%',
 													language : 'fr_FR',
 													plugins: "textcolor code image link",
@@ -349,7 +344,7 @@ if(isset($config['logo']) && $config['logo']) {
 										<script type="text/javascript">
 											tinymce.init({
 													selector: "#footer_2",
-													height : 100,
+													height : 300,
 													width : '100%',
 													language : 'fr_FR',
 													plugins: "textcolor code image link",
@@ -363,7 +358,7 @@ if(isset($config['logo']) && $config['logo']) {
 										<script type="text/javascript">
 											tinymce.init({
 													selector: "#footer_3",
-													height : 100,
+													height : 300,
 													width : '100%',
 													language : 'fr_FR',
 													plugins: "textcolor code image link",
@@ -377,7 +372,7 @@ if(isset($config['logo']) && $config['logo']) {
 										<script type="text/javascript">
 											tinymce.init({
 													selector: "#footer_copyright",
-													height : 100,
+													height : 300,
 													width : '100%',
 													language : 'fr_FR',
 													plugins: "textcolor code image link",
@@ -396,10 +391,10 @@ if(isset($config['logo']) && $config['logo']) {
   </div>
 	<div class="row">
 		<div class="col-md-4">
-			<div class="box box-success">
-        <div class="box-header with-border">
-          <h3 class="box-title">Changelog</h3>
-          <div class="box-tools pull-right">
+			<div class="card card-success">
+        <div class="card-header with-border">
+          <h3 class="card-title">Changelog</h3>
+          <div class="card-tools pull-right">
             <span class="label label-primary">
 							<?php foreach ($Theme->getThemesInstalled() as $theme): ?>
 								<?php if ($theme->name == "Guide"): ?>
@@ -410,32 +405,32 @@ if(isset($config['logo']) && $config['logo']) {
 						</span>
           </div>
         </div>
-        <div class="box-body">
+        <div class="card-body">
           <?= file_get_contents("../View/Themed/Guide/Config/changelog.html"); ?>
         </div>
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="box box-info">
-        <div class="box-header with-border">
-          <h3 class="box-title">Une question ?</h3>
+			<div class="card card-info">
+        <div class="card-header with-border">
+          <h3 class="card-title">Une question ?</h3>
         </div>
-        <div class="box-body">
+        <div class="card-body">
 					Signalez tout problème avec le thème avec le bouton "Signaler un bug". Si vous souhaitez me contacter, mentionnez moi sur le Discord de Mineweb ou par message privé.
         </div>
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="box box-warning">
-        <div class="box-header with-border">
-          <h3 class="box-title">Bugs connus</h3>
-					<div class="box-tools pull-right">
+			<div class="card card-warning">
+        <div class="card-header with-border">
+          <h3 class="card-title">Bugs connus</h3>
+					<div class="card-tools pull-right">
             <a href="https://gitlab.com/mrsheepsheep/mw-guide/issues" class="label label-danger">
 							Signaler un bug
 						</a>
 					</div>
         </div>
-        <div class="box-body" id="issues">
+        <div class="card-body" id="issues">
           <?= json_decode(file_get_contents('https://gitlab.com/mrsheepsheep/mw-guide/issues.json'), true)['html']; ?>
 					<small>Les nouveaux bugs non résolus apparaîtront ici.</small>
         </div>
